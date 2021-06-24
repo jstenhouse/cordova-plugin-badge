@@ -131,7 +131,7 @@ static NSString * const kAPPBadgeConfigKey = @"APPBadgeConfigKey";
         UNUserNotificationCenter *center =
         UNUserNotificationCenter.currentNotificationCenter;
 
-        UNAuthorizationOptions options = UNAuthorizationOptionBadge;
+        UNAuthorizationOptions options = UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge;
 
         [center requestAuthorizationWithOptions:options
                               completionHandler:^(BOOL granted, NSError* e) {
